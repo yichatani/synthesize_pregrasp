@@ -1,8 +1,11 @@
 import os
+import sys
 from argparse import ArgumentParser
 from functools import partial
 import open3d as o3d
 import numpy as np
+current_file = os.path.abspath(__file__)
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(current_file))))
 import utils.helper as helper
 from neurals.NPGraspNet import NPGraspNet
 from neurals.test_options import TestOptions

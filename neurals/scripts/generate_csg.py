@@ -1,10 +1,16 @@
 import os
+import sys
 import copy
 import inspect
 import open3d as o3d
 import numpy as np
 import torch
 from argparse import ArgumentParser
+current_file = os.path.abspath(__file__)
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(current_file))))
+# for p in sys.path:
+#     print(p)
+# exit()
 from utils.contact_state_graph import ContactStateGraph
 from utils.small_block_region import SmallBlockRegionDummy
 from utils.mesh_region import MeshRegion

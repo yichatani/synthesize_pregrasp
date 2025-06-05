@@ -161,6 +161,7 @@ class PlateBulletEnv(gym.Env):
                                              has_distance_field=self.has_distance_field)
             if self.mode != "only_score":
                 self.score_function.load_dex_grasp_net(dex_path)
+            sc_path = os.path.abspath(sc_path)
             self.score_function.load_score_function(sc_path)
         self.dist_field_env = create_plate_df()
 
